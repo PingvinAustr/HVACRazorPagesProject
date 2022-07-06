@@ -1,0 +1,27 @@
+﻿@page
+@model RazorPagesApp.Pages.IndexModel
+@{
+    Layout = "Shared/_Layout.cshtml";
+    Response.Cookies.Delete("go_to_tab_number");
+}
+
+<head>
+ <link rel='stylesheet' href=~/css/site.css />
+</head>
+
+<body> 
+    <div class="index_render_wrapper"> 
+        @{
+            Console.WriteLine("[" + Request.Cookies["go_to_tab_number"] + "]");
+            switch (Request.Cookies["go_to_tab_number"]){
+                case "2": {  @await Html.PartialAsync("SecondTab(GoogleMaps).cshtml"); break; }
+                default:  { @await Html.PartialAsync("FirstTab(ServiceDescription).cshtml"); break; }
+            }
+
+            
+        }
+        
+    
+    </div>
+    <script src="js/site.js"></script>
+</body>
