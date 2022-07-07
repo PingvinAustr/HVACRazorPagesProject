@@ -14,7 +14,12 @@
         @{
             Console.WriteLine("[" + Request.Cookies["go_to_tab_number"] + "]");
             switch (Request.Cookies["go_to_tab_number"]){
-                case "2": {  @await Html.PartialAsync("SecondTab(GoogleMaps).cshtml"); break; }
+                case "1": { 
+                        @await Html.PartialAsync("FirstTab(ServiceDescription).cshtml")
+                        ; break;
+                    }
+                case "2": {  
+                        @await Html.PartialAsync("SecondTab(GoogleMaps).cshtml"); break; }
                 default:  { @await Html.PartialAsync("FirstTab(ServiceDescription).cshtml"); break; }
             }
 
