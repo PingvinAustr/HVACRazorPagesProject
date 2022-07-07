@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "q6qCMJHSesOBsWFWj4SY524Xt8AJ0Wq1FZ42NJFQf1s=",
+  "Hash": "3pivIf+Tpgc4h/ZhGqhZDLwrT8h61KLsqzwbX24XJ60=",
   "Source": "RazorPagesApp",
   "BasePath": "_content/RazorPagesApp",
   "Mode": "Default",
@@ -16,6 +16,40 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Yaroslav\\source\\repos\\RazorPagesApp\\RazorPagesApp\\wwwroot\\css\\firstTab.css",
+      "SourceId": "RazorPagesApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Yaroslav\\source\\repos\\RazorPagesApp\\RazorPagesApp\\wwwroot\\",
+      "BasePath": "_content/RazorPagesApp",
+      "RelativePath": "css/firstTab.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\firstTab.css"
+    },
+    {
+      "Identity": "C:\\Users\\Yaroslav\\source\\repos\\RazorPagesApp\\RazorPagesApp\\wwwroot\\css\\secondTab.css",
+      "SourceId": "RazorPagesApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Yaroslav\\source\\repos\\RazorPagesApp\\RazorPagesApp\\wwwroot\\",
+      "BasePath": "_content/RazorPagesApp",
+      "RelativePath": "css/secondTab.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\secondTab.css"
+    },
     {
       "Identity": "C:\\Users\\Yaroslav\\source\\repos\\RazorPagesApp\\RazorPagesApp\\wwwroot\\css\\site.css",
       "SourceId": "RazorPagesApp",
