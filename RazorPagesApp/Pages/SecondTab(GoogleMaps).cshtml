@@ -1,11 +1,11 @@
 ﻿<div class="rendered_tab">
     <div class="second_tab_upper_part">
         <h2 class="center">please provide your address first</h2>
-        <div class="in_out_service_area_block">
-            YOU’RE WITHIN OUR SERVICE AREA
+        <div class="in_out_service_area_block" id="in_out_service_area_block">
+            PLEASE ENTER YOUR LOCATION OR SELECT IT ON THE MAP
         </div>
-        <input class="in_out_service_area_block in_out_service_area_block_input" type="text"/>
-        <div class="button" style="margin-top:0px;">check</div>
+        <input class="in_out_service_area_block in_out_service_area_block_input" id="address_text_input" type="text"/>
+        <div class="button button_disabled" style="margin-top:0px;" id="check_address_button">check</div>
     </div>
 
     <div class="second_tab_bottom_part">
@@ -24,48 +24,10 @@
 
 </div>
 
-<script>
-function myMap() {
+<script src="js/site.js">
+    
+ 
 
-    //Init Map
-var mapProp= {
-  center:new google.maps.LatLng(50.44285294234484,30.52048967989053),
-  zoom:15,
-};
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-
-
- // Define the LatLng coordinates for the polygon's path.
-  const triangleCoords = [
-    { lat: 50.45125028203446, lng: 30.4644843727113 }, 
-    { lat: 47.83342890475778, lng: 35.13081034024441 }, 
-    { lat: 46.475703107961394, lng: 30.702054467211326 }, 
-    { lat: 50.45125028203446, lng: 30.4644843727113 },
-  ];
-
-  //Create polygon
-  const mapsTriangle=new google.maps.Polygon({
-      paths:triangleCoords,
-      strokeColor: "#FF0000",
-    strokeOpacity: 0.8,
-    strokeWeight: 2,
-    fillColor: "#FF0000",
-    fillOpacity: 0.35,
-  });
-
-  mapsTriangle.setMap(map);
-
-/*
-var marker = new google.maps.Marker({
-    position: new google.maps.LatLng(50.44285294234484,30.52048967989053)
-});
-marker.setMap(map);
-*/
-
-
-
-}
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7icEDaxtp_5-kByss70SHiAN4PX0SI1U&callback=myMap"></script>

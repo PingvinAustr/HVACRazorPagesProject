@@ -140,12 +140,20 @@ img{
     transition:.5s;
 }
 
-    .button:hover {
+    .button:not(.button_disabled):hover {
         background:white;
         border: 1px solid #660000;
         color: #660000;
 
     }
+
+    .button_disabled{
+        background-color:lightgray;
+        color:black;
+       
+        cursor:not-allowed;
+    }
+
 
    
 
@@ -221,4 +229,7 @@ img{
 
 .nomargin{
     margin:0;
+}
+.warning {
+    background-color: #ffbebe;
 }
