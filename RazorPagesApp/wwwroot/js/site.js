@@ -1,16 +1,15 @@
 ﻿myMap();
-
+var g_input, g_in_servicearea = false;
 
 function SwitchTab(go_to_tab_number) {
     //sessionStorage.setItem('go_to_tab_number', go_to_tab_number);
     //alert(sessionStorage.getItem('go_to_tab_number'));
     document.cookie = "go_to_tab_number=" + go_to_tab_number;
-    //alert(document.cookie);
     document.location.reload();
+
+
+
 }
-
-
-
 
 function myMap() {
     var marker;
@@ -101,18 +100,20 @@ function myMap() {
         placeMarker(event.latLng);
     });
 
-   
+    
 
     let text_input = document.getElementById("address_text_input");
     text_input.addEventListener("input", function () {
-        if (text_input.value == "") {            
+        if (text_input.value == "") {
+
+
+
             document.getElementById("check_address_button").classList.add('button_disabled');
-            document.getElementById("check_address_button").removeEventListener("click", function () {
-                convertAddressToCoords();
-            });
+            document.getElementById("check_address_button").replaceWith(document.getElementById("check_address_button").cloneNode(true));
 
         }
         else {
+          
             document.getElementById("check_address_button").addEventListener("click", function () {
                 convertAddressToCoords();
             });
@@ -126,7 +127,8 @@ function myMap() {
 
     
     function placeMarker(location) {
-      
+
+        g_input = true;
 
         if (marker == null) marker = new google.maps.Marker({
             position: location,
@@ -151,20 +153,24 @@ function myMap() {
         if (ray_casting([parseFloat(lat_coord), parseFloat(lon_coord)], coords_2d_mas)) {
             info_block.innerHTML = "YOU’RE WITHIN OUR SERVICE AREA";
             info_block.classList.remove("warning");
-            
+            g_in_servicearea = true;
+            document.getElementById("second_tab_next_button").classList.remove("button_disabled");
 
         }
         else {
             info_block.innerHTML = "YOU’RE OUT OF OUR SERVICE AREA";
             info_block.classList.add("warning");
+            g_in_servicearea = false;
+            document.getElementById("second_tab_next_button").classList.add("button_disabled");
         }
 
         convertCoordsToAddress(parseFloat(lat_coord), parseFloat(lon_coord));
-        
+        //document.getElementById("second_tab_next_button").classList.remove("button_disabled");
+
     }
 
     function convertAddressToCoords() {
-      
+
         address = document.getElementById('address_text_input').value;
         fetch("https://maps.googleapis.com/maps/api/geocode/json?address=" + address + '&key=' + "AIzaSyD7icEDaxtp_5-kByss70SHiAN4PX0SI1U")
             .then(response => response.json())
@@ -175,7 +181,7 @@ function myMap() {
                 let latlng = new google.maps.LatLng(latitude, longitude);
 
                 placeMarker(latlng);
-               
+                //document.getElementById("second_tab_next_button").classList.remove("button_disabled");
             })
     }
 
