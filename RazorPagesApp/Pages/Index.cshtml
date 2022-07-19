@@ -19,8 +19,26 @@
                         ; break;
                     }
                 case "2": {  
-                        @await Html.PartialAsync("SecondTab(GoogleMaps).cshtml"); break; }
-                default:  { @await Html.PartialAsync("FirstTab(ServiceDescription).cshtml"); break; }
+                        @await Html.PartialAsync("SecondTab(GoogleMaps).cshtml")
+                        ;
+                        break; }
+                case "3":
+                    {
+                        RazorPagesApp.RazorPagesAppContext test = new RazorPagesApp.RazorPagesAppContext();
+
+                        @await Html.PartialAsync("ThirdTab(SystemTypes).cshtml",test)
+                        ;
+                        break;
+                    }
+
+               case "4":
+                    {
+                        @await Html.PartialAsync("fourthTab(upload_images).cshtml");
+                        break;
+                    }
+
+                default:  { 
+                        @await Html.PartialAsync("FirstTab(ServiceDescription).cshtml"); break; }
             }
 
             
