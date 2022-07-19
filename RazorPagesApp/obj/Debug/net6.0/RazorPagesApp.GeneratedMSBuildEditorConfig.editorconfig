@@ -19,6 +19,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmlyc3RUYWIoU2VydmljZURlc2NyaXB0aW9uKS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Yaroslav/source/repos/RazorPagesApp/RazorPagesApp/Pages/fourthTab(upload_images).cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcZm91cnRoVGFiKHVwbG9hZF9pbWFnZXMpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Yaroslav/source/repos/RazorPagesApp/RazorPagesApp/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -29,4 +33,8 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Yaroslav/source/repos/RazorPagesApp/RazorPagesApp/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yaroslav/source/repos/RazorPagesApp/RazorPagesApp/Pages/ThirdTab(SystemTypes).cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGhpcmRUYWIoU3lzdGVtVHlwZXMpLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
