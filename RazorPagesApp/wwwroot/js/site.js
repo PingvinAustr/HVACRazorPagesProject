@@ -155,6 +155,9 @@ function myMap() {
             info_block.classList.remove("warning");
             g_in_servicearea = true;
             document.getElementById("second_tab_next_button").classList.remove("button_disabled");
+            document.getElementById("second_tab_next_button").addEventListener("click", function() {
+                SwitchTab(3);
+            });
 
         }
         else {
@@ -162,6 +165,7 @@ function myMap() {
             info_block.classList.add("warning");
             g_in_servicearea = false;
             document.getElementById("second_tab_next_button").classList.add("button_disabled");
+            document.getElementById("second_tab_next_button").replaceWith(document.getElementById("second_tab_next_button").cloneNode(true));
         }
 
         convertCoordsToAddress(parseFloat(lat_coord), parseFloat(lon_coord));
